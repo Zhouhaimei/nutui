@@ -31,11 +31,18 @@
             </thead>
             <tbody>
                 <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>speed</td>
+                <td>移动速度默认0和不移动</td>
+                <td>Number</td>
+                <td>0</td>
+                <td>--</td>
+                </tr>
+                <tr>
+                <td>layer</td>
+                <td>元素的层级默认0</td>
+                <td>Number</td>
+                <td>0</td>
+                <td>--</td>
                 </tr>
             </tbody>
             </table>

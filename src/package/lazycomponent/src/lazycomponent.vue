@@ -168,17 +168,9 @@ export default {
                 break;
             };            
             let $elm = this.$el;
-            this.io = new IntersectionObserver(this.Intersections,{  
-                // 用于计算相交区域的根元素
-                // 如果未提供，使用最上级文档的可见窗口
-                root: this.viewport,
-                // 同 margin，可以是 1、2、3、4 个值，允许时负值。
-                // 如果显式指定了跟元素，该值可以使用百分比，即根元素大小的百分之多少。
-                // 如果没指定根元素，使用百分比会出错。
-                rootMargin,
-                // 触发回调函数的临界值，用 0 ~ 1 的比率指定，也可以是一个数组。
-                // 其值是被观测元素可视面积 / 总面积。
-                // 当可视比率经过这个值的时候，回调函数就会被调用。
+            this.io = new IntersectionObserver(this.Intersections,{               
+                root: this.viewport,               
+                rootMargin,               
                 threshold: [ 0, Number.MIN_VALUE, 0.01]        
             });
             //对当前元素进行监听

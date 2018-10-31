@@ -10,7 +10,8 @@ function requestAniFrame() {
 //是否出现在视口内（垂直方向）
 function verInViewport(el, viewHeight) {
     var rect = el.getBoundingClientRect();
-    return (rect.top > 0 && rect.top < viewHeight);
+    var top = rect.top-document.documentElement.clientTop+document.documentElement.scrollTop;
+    return (top> 0 && top < viewHeight);
 }
 //是否出现在视口内（水平方向）
 function horInViewport(el, viewWidth) {

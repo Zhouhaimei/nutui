@@ -1,7 +1,7 @@
 <template>
     <div class="nut-addimagesbox">
         <div v-html="icon"></div>
-        <input  @change="addImg" class="addImgs" type="file" name="files" multiple="multiple" accept="image/*">
+        <input ref="uploadInput"  @change="addImg" class="addImgs" type="file" name="files" multiple="multiple" accept="image/*">
     </div>
 </template>
 <script>
@@ -66,6 +66,7 @@ export default {
     methods: {
          addImg(node){
              //获取路径
+                debugger;
                 let that = this;
                 var file = node.target.files;  
                 let nowLength = that.imgArr.length;
@@ -92,7 +93,8 @@ export default {
                             msg:thatFile
                         });  
                     }                                        
-                }                
+                }   
+                this.$refs.uploadInput.value = '';             
                                    
         },
          preview(data){
